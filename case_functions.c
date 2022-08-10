@@ -51,7 +51,7 @@ int print_sign(va_list list, int count)
 return (count);
 }
 
- /**
+/**
   * print_binary - Function that prints binary of numnbers
   * @list: Variable list
   * @count: Parameter that count
@@ -65,7 +65,7 @@ int print_binary(va_list list, int count)
 	char *str;
 
 	if (aux == INT_MAX || aux == INT_MIN)
-			return (0);
+		return (0);
 
 	str = convert_to("0123456789abcdef", aux, 2);
 	_puts(str);

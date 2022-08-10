@@ -4,7 +4,7 @@
  * _printf - Function that produces output according to a format.
  * @format: Parameters that contains a string
  *
- * Returns: The number of characters printed
+ * Return: The number of characters printed
  */
 
 int _printf(const char *format, ...)
@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	int count;
 
 	if (format == NULL)
-			return (-1);
+		return (-1);
 
 	va_start(myNumber, format);
 	count = string_loop(myNumber, format);
@@ -45,7 +45,7 @@ int string_loop(va_list list, const char *string)
 			new = string[i];
 
 			if (new == '\0')
-					return (-1);
+				return (-1);
 
 			count = switch_func(list, new, count);
 
