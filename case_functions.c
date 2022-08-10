@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_string: Function that print string
+ * print_string - Function that print string
  * @list: Variable list
  * @count: Parameter that count
- * 
+ *
  * Return: integer
  */
 
@@ -26,16 +26,16 @@ int print_string(va_list list, int count)
 }
 
 /**
- * print_sign: Function that prints sign
+ * print_sign - Function that prints sign
  * @list: Variable list
  * @count: Parameter that count
- * 
+ *
  * Return: integer
  */
 
- int print_sign(va_list list, int count)
- {
- 	int aux = va_arg(list, int);
+int print_sign(va_list list, int count)
+{
+	int aux = va_arg(list, int);
 	char *str;
 
 	if (aux < 0)
@@ -49,13 +49,13 @@ int print_string(va_list list, int count)
 	_puts(str);
 	count += _strlen(str);
 return (count);
- }
+}
 
  /**
-  * print_binary: Function that prints binary of numnbers
+  * print_binary - Function that prints binary of numnbers
   * @list: Variable list
   * @count: Parameter that count
-  * 
+  *
   * Return: integer
   */
 
@@ -75,17 +75,17 @@ int print_binary(va_list list, int count)
 }
 
 /**
- * convert_to: Function that prints and convert numbers
- * @representation: 
- * @num: 
- * @base: 
- * 
+ * convert_to - Function that prints and convert numbers
+ * @representation: An array of integers
+ * @num: The integer value
+ * @base: The base to be used
+ *
  * Return: char
  */
 
- char *convert_to(char representation[], unsigned int num, int base)
- {
- 	int mod;
+char *convert_to(char representation[], unsigned int num, int base)
+{
+	int mod;
 	static char buffer[120];
 	char *ptr;
 
@@ -96,48 +96,7 @@ int print_binary(va_list list, int count)
 		mod = num % base;
 		*--ptr = representation[mod];
 		num /= base;
-	}
-	while (num != 0);
+	} while (num != 0);
 
 	return (ptr);
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
