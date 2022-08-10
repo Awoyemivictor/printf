@@ -86,7 +86,7 @@ int switch_func(va_list list, char aux, int count)
 				count = print_character(list, count);
 				break;
 		}
-	/*	case 's':
+		case 's':
 		{
 				count = print_string(list, count);
 				break;
@@ -101,7 +101,7 @@ int switch_func(va_list list, char aux, int count)
 		{
 			count = print_binary(list, count);
 			break;
-		}*/
+		}
 		default:
 			return (0);
 	}
