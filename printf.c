@@ -81,6 +81,12 @@ int switch_func(va_list list, char aux, int count)
 {
 	switch (aux)
 	{
+		case '%':
+		{
+			_putchar('%');
+			count++;
+			break;
+		}
 		case 'c':
 		{
 				count = print_character(list, count);
